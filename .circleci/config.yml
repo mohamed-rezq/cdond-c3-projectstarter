@@ -117,3 +117,16 @@ jobs:
           name: npm run build
           working_directory: ./frontend
           command: npm run build
+
+workflows:
+  default:
+    jobs:
+      - install-backend-dependencies
+      - install-frontend-dependencies
+
+      - build-backend:
+          requires:
+            - install-backend-dependencies
+      - build-frontend:
+          requires:
+            - install-frontend-dependencies
