@@ -170,7 +170,7 @@ jobs:
       - run:
           name: Check Frontend against security vulnerabilities
           working_directory: ./frontend
-          command: npm audit --audit-level=critical
+          command: npm install && npm audit --audit-level=critical
 
 
   scan-backend:
@@ -202,9 +202,9 @@ workflows:
       - test-frontend:
           requires:
             -  build-frontend
-      - scan-backend:
-          requires:
-            - build-backend
       - scan-frontend:
           requires:
             - build-frontend
+      - scan-backend:
+          requires:
+            - build-backend
