@@ -61,7 +61,7 @@ commands:
           when: << parameters.when >>
 
 jobs:
-  update npm:
+  npm update:
     executor: node
     steps:
       - checkout
