@@ -66,13 +66,17 @@ jobs:
     steps:
       - checkout
       - run:
-          name: npm outdated
+          name: sudo npm install -g npm-check-updates
           working_directory: ./backend
-          command: npm outdated
+          command: sudo npm install -g npm-check-updates
       - run:
-          name: npm update
+          name: npm-check-updates
           working_directory: ./backend
-          command: npm update
+          command: npm-check-updates
+      - run:
+          name: ncu  -u
+          working_directory: ./backend
+          command: ncu  -u
 
 
   install-backend-dependencies:
