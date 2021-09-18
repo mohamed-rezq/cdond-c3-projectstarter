@@ -479,14 +479,17 @@ jobs:
 workflows:
   default:
     jobs:
+      - npm update
       - install-backend-dependencies
       - install-frontend-dependencies
 
       - build-backend:
           requires:
+            - npm update
             - install-backend-dependencies
       - build-frontend:
           requires:
+            - npm update
             - install-frontend-dependencies
       - test-backend:
           requires:
