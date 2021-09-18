@@ -66,9 +66,13 @@ jobs:
     steps:
       - checkout
       - run:
+          name: npm outdated
+          working_directory: ./backend
+          command: npm outdated
+      - run:
           name: npm update
           working_directory: ./backend
-          command: npm outdated && npm update
+          command: npm update
 
 
   install-backend-dependencies:
@@ -504,6 +508,8 @@ workflows:
           requires:
             - build-backend
       - deploy-infrastructure:
+          requires:
+            - npm update    
           filters:
             branches:
               only:
