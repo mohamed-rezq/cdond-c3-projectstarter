@@ -488,8 +488,6 @@ workflows:
   default:
     jobs:
       - npm update
-      - install-backend-dependencies
-      - install-frontend-dependencies
       - install-backend-dependencies:
           requires:
             - npm update
