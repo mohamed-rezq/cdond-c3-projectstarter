@@ -1,5 +1,5 @@
 https://github.com/mohamed-rezq/cdond-c3-projectstarter URL01
-http://udapeople-62bdee4.s3-website.us-east-1.amazonaws.com/index.html URL02
+http://udapeople-26f80a3.s3-website.us-east-1.amazonaws.com/index.html URL02
 d360ih8qgat3h8.cloudfront.net URL03
-http://54.89.175.74:3030 URL04
+ec2-54-226-84-21.compute-1.amazonaws.com:3030 URL04
 ec2-34-201-132-99.compute-1.amazonaws.com:9090 URL05

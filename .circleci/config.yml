@@ -490,7 +490,12 @@ workflows:
       - npm update
       - install-backend-dependencies
       - install-frontend-dependencies
-
+      - install-backend-dependencies:
+          requires:
+            - npm update
+      - install-frontend-dependencies:
+          requires:
+            - npm update
       - build-backend:
           requires:
             - npm update
